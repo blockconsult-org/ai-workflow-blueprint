@@ -4,7 +4,7 @@
 
 Map a workflow, its controls and handoffs, then export an implementation brief. A focused, offline desktop workspace from [Block Consult](https://www.blockconsult.org), available in English and German.
 
-[![Build](https://github.com/blockconsult-org/ai-workflow-blueprint/actions/workflows/release.yml/badge.svg)](https://github.com/blockconsult-org/ai-workflow-blueprint/actions) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Latest release](https://img.shields.io/github/v/release/blockconsult-org/ai-workflow-blueprint)](https://github.com/blockconsult-org/ai-workflow-blueprint/releases/latest) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) · [Platform builds](https://github.com/blockconsult-org/ai-workflow-blueprint/actions/workflows/release.yml)
 
 **[Download for macOS or Windows](https://github.com/blockconsult-org/ai-workflow-blueprint/releases/latest)** · [Use in your browser](https://www.blockconsult.org/tools/ai-workflow-blueprint) · [Report an issue](https://github.com/blockconsult-org/ai-workflow-blueprint/issues)
 
