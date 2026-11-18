@@ -1,14 +1,43 @@
-<p align="left"><img src="public/icon.png" width="64" alt="Block Consult" /></p>
+<a href="https://www.blockconsult.org">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="public/blockconsult-logo.png">
+    <img src="public/blockconsult-logo-light.png" alt="Block Consult" width="280">
+  </picture>
+</a>
 
 # AI Workflow Blueprint
 
-Map a workflow, its controls and handoffs, then export an implementation brief. A focused, offline desktop workspace from [Block Consult](https://www.blockconsult.org), available in English and German.
+Turn an AI use case into a workflow your team can review and build. Define the intended outcome, map steps and decision branches, assign responsibilities and approvals, then export an editable implementation brief and workflow diagram.
+
+An offline desktop tool from [Block Consult](https://www.blockconsult.org), available in English and German, with light and dark themes.
 
 [![Latest release](https://img.shields.io/github/v/release/blockconsult-org/ai-workflow-blueprint)](https://github.com/blockconsult-org/ai-workflow-blueprint/releases/latest) [![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE) · [Platform builds](https://github.com/blockconsult-org/ai-workflow-blueprint/actions/workflows/release.yml)
 
 **[Download for macOS or Windows](https://github.com/blockconsult-org/ai-workflow-blueprint/releases/latest)** · [Use in your browser](https://www.blockconsult.org/tools/ai-workflow-blueprint) · [Report an issue](https://github.com/blockconsult-org/ai-workflow-blueprint/issues)
 
-![AI Workflow Blueprint workspace](docs/screenshot.png)
+![AI Workflow Blueprint in dark mode, showing the use-case editor and a summary of the starting workflow](docs/screenshot.png)
+
+## What you can do
+
+- Start from internal knowledge Q&A, enquiry triage, document extraction, proposal drafting or recurring reporting templates.
+- Define the objective, scope, source data, intended software, owners, success criteria and authorization conditions.
+- Edit up to twenty workflow steps, including source retrieval, AI tasks, validation, human review, external actions and failure paths.
+- Review a connected workflow diagram and ordered steps. Graph checks expose cycles, missing connections and approval-path problems.
+- Edit the generated implementation brief. Manual sections retain your wording and are flagged for review when their inputs change.
+- Export diagrams as SVG or PNG, the brief as Markdown or PDF, and the complete editable model as JSON.
+
+## Get started
+
+1. Choose a **Starting template** and select **Use template**, or begin with the loaded internal knowledge Q&A example.
+2. Complete **Use case**, including the intended outcome, source rights, owner and approval conditions.
+3. Open **Workflow** to edit steps, branches, responsibility and failure behavior; then review **Brief** and resolve the reported issues.
+4. Use **Save locally** to keep a draft, or **Export** to save the editable JSON, diagram or implementation brief.
+
+## Screenshots
+
+![Internal knowledge Q&A example in light mode, showing editable workflow steps and the connected decision diagram](docs/screenshots/example.png)
+
+The built-in internal knowledge Q&A workflow shows source access checks, human review and exception paths. It is an editable plan; no software is connected or executed. Both screenshots show the actual desktop app with fictional example data or its starting workspace.
 
 ## Download and install
 
@@ -20,22 +49,23 @@ Map a workflow, its controls and handoffs, then export an implementation brief. 
 
 Release notes state the signing and notarization status of each download. Unsigned Windows releases may show a publisher warning. macOS requires macOS 13 or later. Check `SHA256SUMS.txt` against the downloaded file using `shasum -a 256` (macOS) or `Get-FileHash -Algorithm SHA256` (PowerShell). Download only from this repository's Releases page.
 
-## A private workspace
+## Your data
 
-- Calculations and editing work without an internet connection, account or API key.
-- English/German UI, light/dark themes, keyboard controls and resizable layouts.
-- Existing JSON models and browser share links remain compatible. Use **Open share link** to inspect a shared scenario locally.
-- Exports use a native file-save dialog. **File → Save report as PDF** writes a local PDF.
-- Drafts stay in this app's local profile; JSON exports are portable backups. Draft behavior follows the original tool (see the tool's save controls).
-- No analytics, telemetry, cloud synchronization or automatic uploads. Website and evidence links open in your default browser. Unknown evidence destinations require confirmation.
+Calculations and editing run locally without an internet connection, account or API key. The app has no analytics, telemetry, cloud synchronization or automatic uploads.
 
-Share links are readable, encoded snapshots, **not encrypted**. Review the sharing preview and optional inclusion of authored text before copying one. Closing an unsaved workspace can lose edits; save or export first. Opening a share link replaces the current workspace.
+Use **Save locally** to keep a draft in this app, or **Export → Export JSON** to keep every input, branch and manual brief edit in a portable file. Save explicitly before closing. Shared snapshots open read-only, and making a copy does not replace your saved draft until you save it.
 
-## Develop
+JSON models and browser share links are compatible with the Block Consult browser tool. **Open share link** lets you inspect a shared scenario in the desktop app. Save or export before opening a share link; navigation replaces the open workspace. Share links contain readable, encoded snapshots and are not encrypted. Review the sharing preview and the option to include authored text before creating one.
+
+Exports use native file-save dialogs. **File → Save report as PDF** saves a local PDF. Website and evidence links open in your default browser; unknown evidence destinations require confirmation.
+
+## Run from source
 
 Install Node.js 24 or newer, then:
 
 ```sh
+git clone https://github.com/blockconsult-org/ai-workflow-blueprint.git
+cd ai-workflow-blueprint
 npm ci
 npm run build
 npm start
@@ -59,14 +89,14 @@ npm run dist -- --win --x64       # on Windows
 | `tests/` | Calculation regressions and real desktop integration checks |
 | `.github/workflows/release.yml` | Tests and platform builds; draft releases for version tags |
 
-The original pure model code is preserved. The desktop adaptation changes navigation, share-link origins, local resources and native export handling. Source baseline: `1acdf7a290ef4d54e0b882c9d1b8c2bde79c8f9e`. No website server, portal, client data, credentials or provider integration is included.
-
 ## Release and maintenance
 
-See [release instructions](docs/RELEASING.md), [security policy](SECURITY.md) and [contribution guide](CONTRIBUTING.md). Releases are manual downloads; the app does not silently update. Keep the Electron runtime current when maintaining a fork.
+See the [release instructions](docs/RELEASING.md). Releases are manual downloads; the app does not silently update. Keep the Electron runtime current when maintaining a fork.
 
-These tools support planning and discussion. Results depend on the supplied assumptions and the documented model limitations; they are not a prediction or professional advice.
+This is a deterministic planning tool with authored templates. It does not run an AI model, connect software or execute a workflow. A connected graph does not establish production readiness; agree permissions, test targets and ownership with your team.
 
-## License
+## Contributing and license
 
-[MIT](LICENSE) · Copyright © 2026 Block Consult GmbH. Names and logos remain Block Consult trademarks.
+Read the [contribution guide](CONTRIBUTING.md) before opening a pull request. Report vulnerabilities privately through the [security policy](SECURITY.md).
+
+[MIT](LICENSE) · Copyright © 2026 Block Consult GmbH. The license covers the code; it does not grant rights to use Block Consult’s name or logo as an endorsement.
