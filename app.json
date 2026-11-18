@@ -1,0 +1,11 @@
+{
+  "slug": "ai-workflow-blueprint",
+  "name": "AI Workflow Blueprint",
+  "nameDe": "KI-Workflow-Blueprint",
+  "description": "Map a workflow, its controls and handoffs, then export an implementation brief.",
+  "version": "1.0.0",
+  "appId": "org.blockconsult.aiworkflowblueprint",
+  "publicPath": "/tools/ai-workflow-blueprint",
+  "repository": "https://github.com/blockconsult-org/ai-workflow-blueprint",
+  "sourceCommit": "1acdf7a290ef4d54e0b882c9d1b8c2bde79c8f9e"
+}
