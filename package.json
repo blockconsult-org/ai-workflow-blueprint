@@ -1,6 +1,6 @@
 {
   "name": "@blockconsult/ai-workflow-blueprint",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
   "description": "Map a workflow, its controls and handoffs, then export an implementation brief.",
   "author": "Block Consult GmbH",
